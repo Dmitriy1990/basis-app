@@ -1,4 +1,21 @@
+@import 'reset';
+@import 'button';
+
 :root {
+  --paper: #efe4cf;
+  --paper-deep: #e2d2b3;
+  --sheet: #fffaf1;
+  --ink: #241c15;
+  --ink-soft: #5e5348;
+  --rule: #d8c7a6;
+  --blue: #0073e6;
+  --blue-deep: #0061e2;
+  --wax: #b42318;
+  --wax-deep: #8a1c14;
+  --moss: #2f6f4e;
+  --moss-soft: #dce8df;
+  --danger: #9b1c1c;
+  --shadow: 0 18px 40px rgba(48, 32, 16, 0.16);
 }
 
 * {
@@ -10,4 +27,87 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-kerning: normal;
+}
+
+.h1 {
+  font-size: 42px;
+}
+
+.app {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 0 64px;
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  &-copy {
+    display: grid;
+    gap: 8px;
+  }
+}
+
+.sheet {
+  background: var(--sheet);
+  border: 1px solid rgba(36, 28, 21, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(48, 32, 16, 0.16);
+  padding: 16px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.note-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px 20px 16px;
+  min-height: 220px;
+  text-align: left;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), transparent 42%), var(--sheet);
+  border: 1px solid rgba(36, 28, 21, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(48, 32, 16, 0.1);
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.16s ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 28px rgba(48, 32, 16, 0.14);
+    outline: none;
+  }
+
+  h2 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    line-height: 1.2;
+  }
+  &__body {
+    flex: 1;
+  }
+  &__title {
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+      outline: none;
+    }
+  }
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
 }
