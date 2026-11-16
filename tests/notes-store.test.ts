@@ -1,13 +1,13 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { resetNotesStore, useNotesStore } from '../app/entities/note/model/notes.store';
-import { SCHEMA_VERSION, type Note } from '../app/entities/note/model/types';
+import { resetNotesStore, useNotesStore } from '../app/entities/model/notes.store';
+import { SCHEMA_VERSION, type Note } from '../app/entities/model/types';
 import {
   NOTES_STORAGE_KEY,
   StorageNoteRepository,
   draftKey,
   resetNoteRepository,
   setNoteRepository,
-} from '../app/entities/note/api';
+} from '../app/entities/api';
 import { MemoryStorageDriver } from '../app/shared/lib';
 
 function sampleNote(id = 'note-1'): Note {

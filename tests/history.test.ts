@@ -6,7 +6,7 @@ import {
   applyPatch,
   invertPatch,
 } from '../app/features/note-editing/model/history';
-import type { NoteDraft } from '../app/entities/note/model/types';
+import type { NoteDraft } from '../app/entities/model/types';
 
 function draft(partial?: Partial<NoteDraft>): NoteDraft {
   return {

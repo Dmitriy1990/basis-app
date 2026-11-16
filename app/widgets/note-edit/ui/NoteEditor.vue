@@ -129,9 +129,7 @@ onBeforeRouteLeave(async () => {
     <header class="app-header">
       <div class="header-copy">
         <h1>{{ isNew ? 'Новая заметка' : 'Редактирование' }}</h1>
-        <p class="kbd-hint">
-          Ctrl+Z и Shift+Ctrl+Z — история правки. В текстовом поле работает обычная отмена ввода.
-        </p>
+        <p class="kbd-hint">Ctrl+Z и Shift+Ctrl+Z отменяют правки в порядке действий</p>
       </div>
       <NuxtLink class="btn btn--ghost" to="/">Все заметки</NuxtLink>
     </header>
